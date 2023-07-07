@@ -28,9 +28,15 @@ function Main() {
     },
   ])
 
+  const [modalOpen, setModalOpen] = useState(false)
+
+  function handleToggleModal() {
+    setModalOpen(!modalOpen)
+  }
+
   return (
     <div className='container'>
-      <Header />
+      <Header handleToggleModal={handleToggleModal}/>
 
       <div className='container-posts'>
         {posts.map((post) => (
@@ -41,7 +47,12 @@ function Main() {
         ))}
       </div>
 
-      <Modal />
+      <Modal 
+      handleToggleModal={handleToggleModal}
+      modalOpen={modalOpen}
+      setPosts={setPosts}
+      posts={posts}
+      />
     </div>
   )
 }
