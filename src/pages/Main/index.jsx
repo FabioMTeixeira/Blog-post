@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import './style.css'
+import { useState } from 'react';
+import Header from '../../components/Header';
+import './style.css';
 
 function Main() {
   const [count, setCount] = useState(0)
 
   return (
     <div className='container'>
-      <h1>hello</h1>
+      <Header />
     </div>
   )
 }
