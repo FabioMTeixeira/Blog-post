@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Header from '../../components/Header';
+import Modal from '../../components/Modal';
 import Post from '../../components/Post';
 import './style.css';
 
@@ -39,6 +40,8 @@ function Main() {
           />
         ))}
       </div>
+
+      <Modal />
     </div>
   )
 }
